@@ -11,7 +11,7 @@ import java.lang.reflect.Modifier;
 import java.util.HashSet;
 
 /**
- * For those, who does not want to deal with Jigsaw
+ * For those, who does not want to deal with Jigsaw <br>
  * <a href="https://openjdk.java.net/jeps/396">https://openjdk.java.net/jeps/396</a>
  *
  * @author xDark

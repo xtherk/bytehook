@@ -1,13 +1,17 @@
 package io.github.xtherk.bytehook;
 
 /**
- * 先描述几个概念:
- * 被Hook的方法称为目标方法或原始方法，替换目标方法的方法称为fake method
- * 目标方法所在的类称为目标类，fake method所在的类称为fake class
+ * An identifier or placeholder to mark that the original method needs to be called.
  * <p>
- * 用于表示需要调用原始方法的标识或占位符
+ * Overview: <br>
+ * The method being hooked is called the "target method" or the "original method",
+ * The method to replace the target method is called "fake method".
  * <p>
- * 框架不会去校验目标方法是否有返回值，请开发人员判断选择调用什么方法
+ * The class in which the target method resides is called the "target class",
+ * The class where the fake method is located is called fake class.
+ *
+ * <p>
+ * The framework will not check whether the target method has a return value
  *
  * @author xtherk
  */
@@ -17,13 +21,16 @@ public final class OriginalMethods {
     }
 
     /**
-     * 如果你需要调用目标方法且目标方法无返回值，请调用此方法
+     * If you need to call the target method and the target method has no return value, please call this method
      */
     public static void callWithNoReturnType() {
     }
 
     /**
-     * 如果你需要调用目标方法且目标方法有返回值，请调用此方法
+     * If you need to call the target method and the target method has a return value, please call this method
+     *
+     * @param <T> Type of original target method
+     * @return The return value of the original target method
      */
     public static <T> T callWithReturnType() {
         return null;
