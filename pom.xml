@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.bytehook</groupId>
+    <groupId>io.github.xtherk</groupId>
     <artifactId>bytehook</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
@@ -62,13 +62,13 @@
             </dependency>
 
             <dependency>
-                <groupId>com.bytehook</groupId>
+                <groupId>io.github.xtherk</groupId>
                 <artifactId>bytehook-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.bytehook</groupId>
+                <groupId>io.github.xtherk</groupId>
                 <artifactId>bytehook-sdk</artifactId>
                 <version>${project.version}</version>
             </dependency>

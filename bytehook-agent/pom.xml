@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>bytehook</artifactId>
-        <groupId>com.bytehook</groupId>
+        <groupId>io.github.xtherk</groupId>
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -17,7 +17,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.bytehook</groupId>
+            <groupId>io.github.xtherk</groupId>
             <artifactId>bytehook-core</artifactId>
         </dependency>
 
@@ -45,8 +45,8 @@
                 <configuration>
                     <archive>
                         <manifestEntries>
-                            <Premain-Class>com.bytehook.agent.Agent</Premain-Class>
-                            <Agent-Class>com.bytehook.agent.Agent</Agent-Class>
+                            <Premain-Class>io.github.xtherk.bytehook.Agent</Premain-Class>
+                            <Agent-Class>io.github.xtherk.bytehook.Agent</Agent-Class>
                             <Can-Redefine-Classes>true</Can-Redefine-Classes>
                             <Can-Retransform-Classes>true</Can-Retransform-Classes>
                         </manifestEntries>
