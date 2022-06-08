@@ -19,7 +19,7 @@
 
     <licenses>
         <license>
-            <name>GNU General Public License v3.0</name>
+            <name>The MIT License</name>
             <url>https://github.com/xtherk/bytehook/blob/master/LICENSE</url>
         </license>
     </licenses>
