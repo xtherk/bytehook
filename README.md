@@ -6,6 +6,25 @@
 
 [bytehook-examples](https://github.com/xtherk/bytehook-examples)
 
+```xml
+<dependency>
+    <groupId>io.github.xtherk</groupId>
+    <artifactId>bytehook-sdk</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+
+<repositories>
+    <repository>
+        <id>ossrh</id>
+        <name>ossrh</name>
+        <url>https://s01.oss.sonatype.org/content/repositories/releases</url>
+        <releases>
+            <enabled>true</enabled>
+        </releases>
+    </repository>
+</repositories>
+```
 ## Features
 
 - [x] Replace the target method
