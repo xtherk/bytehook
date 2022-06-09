@@ -11,6 +11,11 @@ import java.lang.instrument.Instrumentation;
  */
 public class Agent {
 
+    /**
+     * When you want to debug, maybe you want to control the initialization time yourself
+     */
+    private static final String DISABLE_PROPERTY_NAME = "bh.agent.init.disabled";
+
     public static void agentmain(String args, Instrumentation inst) {
         Modules.initialize();
         inst.addTransformer(new HookTransformer(), true);
@@ -18,7 +23,10 @@ public class Agent {
     }
 
     public static void premain(String args, Instrumentation inst) {
-        Modules.initialize();
+        boolean disabled = Boolean.parseBoolean(System.getProperty(DISABLE_PROPERTY_NAME, "false"));
+        if (!disabled) {
+            Modules.initialize();
+        }
         inst.addTransformer(new HookTransformer(), true);
         new Thread(new Reloader(inst)).start();
     }
