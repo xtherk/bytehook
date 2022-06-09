@@ -22,13 +22,13 @@ public class Modules {
     public static volatile boolean initialized = false;
     private static final Path DEFAULT_MODULE_DIR = Paths.get(System.getProperty("user.dir"), "modules");
     /**
-     * 扫描模块目录下的所有资源放入{@link #moduleResourcePaths}
+     * Scan all resources in the module directory into {@link #moduleResourcePaths}
      */
     private static final List<Path> MODULE_DIRECTORIES = new ArrayList<>();
     private static final Logger logger = LoggerFactory.getLogger(Modules.class);
     private static final Map<String, List<Endpoint>> ENDPOINT_MAPPING = new HashMap<>();
     /**
-     * 最终要处理的模块资源
+     * The final module resource to process
      */
     private static final List<Path> moduleResourcePaths = new ArrayList<>();
 
