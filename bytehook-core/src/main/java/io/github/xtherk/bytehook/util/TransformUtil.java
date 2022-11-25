@@ -68,10 +68,14 @@ public class TransformUtil {
         }
 
         if (argumentTypes.length > 0) {
-            int localIndex = isStatic ? 0 : 1;
+            int slot = isStatic ? 0 : 1;
             for (Type argumentType : argumentTypes) {
                 int opcode = OpcodeUtil.getLoadOpcodeByType(argumentType);
-                instNodes.add(new VarInsnNode(opcode, localIndex++));
+                instNodes.add(new VarInsnNode(opcode, slot));
+                if (argumentType == Type.LONG_TYPE || argumentType == Type.DOUBLE_TYPE)
+                    slot += 2;
+                else
+                    slot++;
             }
         }
 
