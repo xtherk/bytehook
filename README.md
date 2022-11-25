@@ -10,7 +10,7 @@
 <dependency>
     <groupId>io.github.xtherk</groupId>
     <artifactId>bytehook-sdk</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <scope>provided</scope>
 </dependency>
 
